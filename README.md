@@ -1,5 +1,5 @@
 # Generate payment card
-This package gebnerates a valid payment card number.
+This package generates a valid payment card number.
 
 [![npm version](https://badge.fury.io/js/generate-payment-card.svg)](https://badge.fury.io/js/generate-payment-card)
 
@@ -7,7 +7,7 @@ This package gebnerates a valid payment card number.
 ### 🚀 Getting started
 Install the package from npm using `npm install generate-payment-card`.
 
-### :toolbox: Basic usage
+### 🧰 Basic usage
 ```javascript
 var { generate } = require('generate-payment-card')
 var payment_card_details = generate({
@@ -19,6 +19,7 @@ var payment_card_details = generate({
     }
 })
 
+console.log(payment_card_details)
 /* outputs: 
 {
     "valid_card_number": "376182345678991",
@@ -28,6 +29,10 @@ var payment_card_details = generate({
 */
 ```
 
-The generator takes in one argument which is a json payload containing a card_brand (string) and user_digits (object).
-- `card_brand`: This is the card brand that the user would like to generate a payment card from. Currently this package is only able to generate mastercard, visa, American Express and Discover cards.
-- `user_digits`: The user can specify a sequence of not more or less than ten digits which they want to be a part of the payment card number. They can also specify where they want this sequence to be placed by setting `position` to either `startswith`, `contains` or `endswith`.
+The `generate` function takes in one argument which is an object containing a card_brand (string), user_digits (object) and `issuer` (string).
+- `card_brand`: This is the card brand that the user would like to generate a payment card from. Currently, this package is only able to generate Mastercard, Visa, American Express and Discover cards.
+- `user_digits`: The user can specify a sequence of not more or less than ten digits which they want to be a part of the payment card number. They can also specify where they want this sequence to be placed by setting `position` to `startswith`, `contains` or `endswith`. This object accepts three keys:
+    - `status`: which shows if the user will be specifying their own sequence of digits. This key's property can either be `true`, `false`, 'yes`, or `no`.
+    - `digits`: This is the sequence of 10 digits that the user provides.
+    - `position`: This indicates where the user wants the digits to be placed in the the generated card numbers.
+- `issuer`: This is the specific organization that the user wants the card to be generated from.
