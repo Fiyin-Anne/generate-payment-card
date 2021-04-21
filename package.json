@@ -6,6 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "credit-card",
+    "payment-card",
+    "generate",
+    "generate-credit-card-number"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Fiyin-Anne/generate-payment-card.git"
