@@ -1,6 +1,6 @@
 {
   "name": "generate-payment-card",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package generates valid payment card (credit, debit or otherwise) numbers.",
   "main": "app.js",
   "scripts": {
