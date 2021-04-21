@@ -4,10 +4,10 @@ This package gebnerates a valid payment card number.
 [![npm version](https://badge.fury.io/js/generate-payment-card.svg)](https://badge.fury.io/js/generate-payment-card)
 
 
-🚀 ### Getting started
+### 🚀 Getting started
 Install the package from npm using `npm install generate-payment-card`.
 
-:toolbox: ### Basic usage
+### :toolbox: Basic usage
 ```javascript
 var { generate } = require('generate-payment-card')
 var payment_card_details = generate({
