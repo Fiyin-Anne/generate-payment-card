@@ -1,11 +1,13 @@
 # Generate payment card
+This package gebnerates a valid payment card number.
 
-https://img.shields.io/npm/v/generate-payment-card?style=plastic
+[![npm version](https://badge.fury.io/js/generate-payment-card.svg)](https://badge.fury.io/js/generate-payment-card)
 
-🚀 Getting started
+
+🚀 ### Getting started
 Install the package from npm using `npm install generate-payment-card`.
 
-:toolbox: Basic usage
+:toolbox: ### Basic usage
 ```javascript
 var { generate } = require('generate-payment-card')
 var payment_card_details = generate({
@@ -27,5 +29,5 @@ var payment_card_details = generate({
 ```
 
 The generator takes in one argument which is a json payload containing a card_brand (string) and user_digits (object).
-- card_brand: This is the card brand that the user would like to generate a payment card from. Currently this package is only able to generate mastercard, visa, American Express and Discover cards.
-- user_digits: The user can specify a sequence of not more or less than ten digits which they want to be a part of the payment card number. They can also specify where they want this sequence to be placed by setting `position` to either `startswith`, `contains` or `endswith`.
+- `card_brand`: This is the card brand that the user would like to generate a payment card from. Currently this package is only able to generate mastercard, visa, American Express and Discover cards.
+- `user_digits`: The user can specify a sequence of not more or less than ten digits which they want to be a part of the payment card number. They can also specify where they want this sequence to be placed by setting `position` to either `startswith`, `contains` or `endswith`.
