@@ -1,6 +1,6 @@
 {
   "name": "generate-payment-card",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This package generates valid payment card (credit, debit or otherwise) numbers.",
   "main": "app.js",
   "scripts": {
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/Fiyin-Anne/generate-payment-card#readme",
   "dependencies": {
-
     "joi": "^17.4.0"
   },
   "devDependencies": {
