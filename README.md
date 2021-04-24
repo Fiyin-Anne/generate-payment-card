@@ -1,7 +1,7 @@
 # Generate payment card
 This package generates a valid payment card number. A payment card can either be a credit, debit or otherwise.
 
-[![npm version](https://badge.fury.io/js/generate-payment-card.svg)](https://badge.fury.io/js/generate-payment-card) [![Coverage Status](https://coveralls.io/repos/github/Fiyin-Anne/generate-payment-card/badge.svg)](https://coveralls.io/github/Fiyin-Anne/generate-payment-card) [![Node.js CI](https://github.com/Fiyin-Anne/generate-payment-card/actions/workflows/node.js.yml/badge.svg)](https://github.com/Fiyin-Anne/generate-payment-card/actions/workflows/node.js.yml)
+[![npm version](https://badge.fury.io/js/generate-payment-card.svg)](https://badge.fury.io/js/generate-payment-card) [![Coverage Status](https://coveralls.io/repos/github/Fiyin-Anne/generate-payment-card/badge.svg?branch=main)](https://coveralls.io/github/Fiyin-Anne/generate-payment-card?branch=main) [![Node.js CI](https://github.com/Fiyin-Anne/generate-payment-card/actions/workflows/node.js.yml/badge.svg)](https://github.com/Fiyin-Anne/generate-payment-card/actions/workflows/node.js.yml)
 
 
 ### 🚀 Getting started
