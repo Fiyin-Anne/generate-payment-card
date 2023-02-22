@@ -37,7 +37,7 @@ describe('GENERATE PAYMENT CARD', function () {
                 "digits": 2345678991,
                 "position": "endswith"
             },
-			"expires_in": 3
+			"expires_in": new Date(Date.now()).setFullYear(new Date(Date.now()).getFullYear() + 5)
 		};
 
         var card_number_details = generateCardNumber(test_params);
@@ -46,7 +46,7 @@ describe('GENERATE PAYMENT CARD', function () {
 		var verify_year = new Date(card_number_details.expiry_date).getFullYear() - new Date(Date.now()).getFullYear();
 
 		expect(validation).to.equal(`${card_number_details.valid_card_number} is a valid payment card number`);
-		expect(verify_year).to.equal(test_params.expires_in);
+		expect(verify_year).to.equal(5);
 		expect(card_number_details).to.have.property('valid_card_number');
 		expect(card_number_details).to.have.property('issuer');
 		expect(card_number_details).to.have.property('card_brand');
@@ -195,7 +195,7 @@ describe('GENERATE PAYMENT CARD', function () {
 	
 	});
 
-	it('<with specified expiry date greaterr than 5> Should throw error', function (){
+	it('<with specified expiry date rang greater than years> Should throw error', function (){
 
 		var test_params = {
             "card_brand": "american express",
@@ -204,10 +204,10 @@ describe('GENERATE PAYMENT CARD', function () {
                 "digits": 2345678991,
                 "position": "endswith"
             },
-			"expires_in": 10
+			"expires_in": new Date(Date.now()).setFullYear(new Date(Date.now()).getFullYear() + 10)
 		};
 
-		expect(() => { generateCardNumber(test_params); }).to.throw("Expiry year must be between 1 and 5.");
+		expect(() => { generateCardNumber(test_params); }).to.throw("Expiry year range must be less than 5 years");
 	
 	});
 
